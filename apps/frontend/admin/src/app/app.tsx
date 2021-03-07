@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import styles from './app.module.scss';
+import styles from './app.module.scss'
 
-import { ReactComponent as Logo } from './logo.svg';
-import star from './star.svg';
+import { ReactComponent as Logo } from './logo.svg'
+import star from './star.svg'
 
-import { Route, Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom'
 
 export function App() {
   return (
@@ -15,7 +15,7 @@ export function App() {
         <h1>Welcome to frontend/admin!</h1>
       </header>
       <main>
-        <h2>Resources &amp; Tools</h2>
+        <h2>Resources &amp Tools</h2>
         <p>Thank you for using and showing some ♥ for Nx.</p>
         <div className="flex github-star-container">
           <a
@@ -136,7 +136,7 @@ nx affected:e2e
       />
       {/* END: routes */}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
