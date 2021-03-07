@@ -29,6 +29,13 @@
     "frontend/client-e2e": {
       "tags": [],
       "implicitDependencies": ["frontend-client"]
+    },
+    "frontend-admin": {
+      "tags": ["scope:frontend-admin"]
+    },
+    "frontend/admin-e2e": {
+      "tags": [],
+      "implicitDependencies": ["frontend-admin"]
     }
   }
 }

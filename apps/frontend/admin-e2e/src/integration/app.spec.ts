@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po'
 
-describe('frontend-client', () => {
+describe('frontend-admin', () => {
   beforeEach(() => cy.visit('/'))
 
   it('should display welcome message', () => {
@@ -8,6 +8,6 @@ describe('frontend-client', () => {
     cy.login('my-email@something.com', 'myPassword')
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to frontend-client!')
+    getGreeting().contains('Welcome to frontend-admin!')
   })
 })
