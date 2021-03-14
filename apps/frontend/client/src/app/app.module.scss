@@ -1,8 +1,12 @@
-@import "../styles/utils.scss";
+@import "../styles/styles.scss";
 
 .demo {
   width: 1200px;
   margin: 0 auto;
   padding: 2em;
   background-color: $test-var;
+}
+
+.test_ff {
+  font-family: $font-open-sans;
 }
