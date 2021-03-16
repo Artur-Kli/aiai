@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@aiai/shared/data-access//interfaces": [
+      "@aiai/shared/data-access/interfaces": [
         "libs/shared/data-access/interfaces/src/index.ts"
       ]
     }
