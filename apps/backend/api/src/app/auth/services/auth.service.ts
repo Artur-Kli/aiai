@@ -5,6 +5,11 @@ import { Injectable } from '@nestjs/common';
 export class AuthService {
 
   login(signInPayload: ISignAuthPayload): Promise<ISignAuthResponse> {
-    return 
+    return
+    // {
+    //   accessToken: //jwt
+    //   expiresIn: //jwt
+    //   id: // user service
+    // }
   }
 }
