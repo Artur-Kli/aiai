@@ -27,6 +27,6 @@
       "implicitDependencies": ["frontend-admin"]
     },
     "backend-api": { "tags": ["scope:backend-api", "type:app"] },
-    "shared-data-access--interfaces": { "tags": [] }
+    "shared-data-access--interfaces": { "tags": ["scope:shared", "type:lib", "lib-type:data-access"] }
   }
 }
