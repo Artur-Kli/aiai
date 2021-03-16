@@ -1,3 +1,4 @@
+import { UsersModule } from './users/users.module';
 import { AppResolver } from './app.resolver';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -8,16 +9,18 @@ import { GraphQLModule } from '@nestjs/graphql';
 
 @Module({
   imports: [
+    UsersModule,
+    UsersModule,
     TypeOrmModule.forRoot({
       ...environment.connection,
     }),
     GraphQLModule.forRoot({
       typePaths: ['./**/*.graphql'],
-      context: ({req}) => ({req}),
+      context: ({ req }) => ({ req }),
       playground: true
     })
   ],
   controllers: [AppController],
   providers: [AppResolver],
 })
-export class AppModule {}
+export class AppModule { }
