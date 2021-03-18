@@ -4,7 +4,7 @@ import { Resolver } from "@nestjs/graphql";
 import { CurrentUser } from '../decorators/user.decorator';
 
 
-@Resolver('user')
+@Resolver('User')
 export class UserResolver {
   constructor(
     private readonly userService: UserService
@@ -12,6 +12,6 @@ export class UserResolver {
 
 
   async whoAmI(@CurrentUser() user: UserEntity) {
-    return this.userService.findOneById(user.id)
+    return await this.userService.findOneById(user.id)
   }
 }
