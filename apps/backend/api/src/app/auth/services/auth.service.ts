@@ -1,10 +1,11 @@
-import { environment } from '../../../environments/environment';
-import { UserEntity } from './../../users/entities/user.entity';
-import { PasswordService } from './password.service';
-import { UserService } from './../../users/services/user.service';
-import { ISignAuthPayload, ISignAuthResponse } from '@aiai/shared/data-access/interfaces';
-import { Injectable, UnauthorizedException } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt';
+import { ISignAuthPayload, ISignAuthResponse } from '@aiai/shared/data-access/interfaces'
+import { Injectable, UnauthorizedException } from '@nestjs/common'
+import { JwtService } from '@nestjs/jwt'
+
+import { environment } from '../../../environments/environment'
+import { UserEntity } from './../../users/entities/user.entity'
+import { PasswordService } from './password.service'
+import { UserService } from './../../users/services/user.service'
 
 @Injectable()
 export class AuthService {
