@@ -1,5 +1,6 @@
-import { IUser } from '@aiai/shared/data-access/interfaces';
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
+
+import type { IUser } from '@aiai/shared/data-access/interfaces'
 
 @Entity({
   name: 'users'

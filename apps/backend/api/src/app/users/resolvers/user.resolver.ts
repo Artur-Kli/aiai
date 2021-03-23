@@ -1,17 +1,21 @@
-import { UserEntity } from './../entities/user.entity';
-import { UserService } from './../services/user.service';
-import { Resolver } from "@nestjs/graphql";
-import { CurrentUser } from '../decorators/user.decorator';
+import { Query, Resolver } from "@nestjs/graphql"
+import { UseGuards } from "@nestjs/common"
+
+import { UserEntity } from './../entities/user.entity'
+import { GqlAuthGuard } from './../quards/gql.auth-guard'
+import { UserService } from './../services/user.service'
+import { CurrentUser } from '../decorators/user.decorator'
 
 
-@Resolver('user')
+@Resolver('User')
 export class UserResolver {
   constructor(
     private readonly userService: UserService
   ) {}
 
-
+  @Query('user')
+  @UseGuards(GqlAuthGuard)
   async whoAmI(@CurrentUser() user: UserEntity) {
-    return this.userService.findOneById(user.id)
+    return await this.userService.findOneById(user.id)
   }
 }

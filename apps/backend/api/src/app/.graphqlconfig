@@ -4,7 +4,8 @@
   "projects": {
     "api": {
       "includes": [
-        "./users/**/*.graphql"
+        "./users/*.graphql",
+        "./auth/*.graphql"
       ]
     }
   },
@@ -13,7 +14,8 @@
       "Default GraphQL Endpoint": {
         "url": "http://localhost:3333/graphql",
         "headers": {
-          "user-agent": "JS GraphQL"
+          "user-agent": "JS GraphQL",
+
         },
         "introspect": false
       }
