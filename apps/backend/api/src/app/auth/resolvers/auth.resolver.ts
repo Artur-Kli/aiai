@@ -1,7 +1,8 @@
+import { Query, Resolver } from "@nestjs/graphql"
+
+import type { ISignAuthPayload, ISignAuthResponse } from "@aiai/shared/data-access/interfaces"
 import { AuthService } from './../services/auth.service'
 import { SignIn } from './../decorators/auth.decorator'
-import { ISignAuthPayload, ISignAuthResponse } from "@aiai/shared/data-access/interfaces"
-import { Query, Resolver } from "@nestjs/graphql"
 
 
 @Resolver('Auth')

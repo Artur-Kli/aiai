@@ -1,16 +1,17 @@
-import { JwtStrategy } from './services/jwt.strategy';
-import { PasswordService } from './services/password.service';
-import { environment } from './../../environments/environment';
-import { UserService } from './../users/services/user.service';
-import { AuthService } from './services/auth.service';
-import { Module } from '@nestjs/common';
-import { PassportModule } from '@nestjs/passport';
-import { JwtModule } from '@nestjs/jwt';
-import { AuthResolver } from './resolvers/auth.resolver';
+import { Module } from '@nestjs/common'
+import { PassportModule } from '@nestjs/passport'
+import { JwtModule } from '@nestjs/jwt'
+
+import { JwtStrategy } from './services/jwt.strategy'
+import { PasswordService } from './services/password.service'
+import { environment } from './../../environments/environment'
+import { AuthService } from './services/auth.service'
+import { AuthResolver } from './resolvers/auth.resolver'
+import { UsersModule } from '../users/users.module'
 
 @Module({
     imports: [
-      UserService,
+      UsersModule,
       PassportModule.register({
         defaultStrategy: 'jwt'
       }),

@@ -11,7 +11,6 @@ import { resolverMap } from './app.resolver'
 
 @Module({
   imports: [
-    AuthModule,
     TypeOrmModule.forRoot({
       ...environment.connection,
       entities: [UserEntity]
@@ -22,7 +21,8 @@ import { resolverMap } from './app.resolver'
       playground: true,
       resolvers: [resolverMap]
     }),
-    UsersModule
+    UsersModule,
+    AuthModule,
   ],
   controllers: [AppController],
 })
