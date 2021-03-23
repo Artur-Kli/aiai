@@ -6,6 +6,6 @@ type User {
   id: Int
   username: String
   email: String
-  created: Data
-  updated: Data
+  created: Date
+  updated: Date
 }
